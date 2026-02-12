@@ -4,7 +4,7 @@ import { CarritoContext } from "./context/CarritoContext";
 import "./index.css";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import Inicio from "./pages/inicio";
+import Inicio from "./pages/Inicio";
 import Carrito from "./pages/Carrito";
 import Detalle from "./pages/Detalle";
 import Noticias from "./components/Noticias";
