@@ -16,9 +16,12 @@ function App() {
 
   const sincronizarDatos = async () => {
     try {
-      const respuesta = await fetch("http://127.0.0.1:8000/sync-facebook", {
-        method: "POST", // OJO: Es un POST porque estamos creando datos
-      });
+      const respuesta = await fetch(
+        "https://mi-api-tienda.onrender.com/sync-facebook",
+        {
+          method: "POST", // OJO: Es un POST porque estamos creando datos
+        },
+      );
       const data = await respuesta.json();
 
       // ¡Aquí está tu alerta!
@@ -35,7 +38,7 @@ function App() {
 
   // 3. AQUÍ OCURRE LA MAGIA
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/products")
+    fetch("https://mi-api-tienda.onrender.com/products")
       .then((response) => response.json()) // b) Convertimos la respuesta a JSON
       .then((data) => {
         // c) Guardamos los datos en el estado

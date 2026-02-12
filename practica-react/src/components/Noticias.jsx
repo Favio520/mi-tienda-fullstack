@@ -7,7 +7,9 @@ export default function Noticias({ recargar }) {
   const obtenerNoticias = async () => {
     try {
       // Llamamos al endpoint GET que creamos en el paso anterior
-      const response = await fetch("http://127.0.0.1:8000/social-posts");
+      const response = await fetch(
+        "https://mi-api-tienda.onrender.com/social-posts",
+      );
       const data = await response.json();
       setNoticias(data);
     } catch (error) {

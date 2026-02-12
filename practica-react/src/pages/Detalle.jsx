@@ -15,7 +15,7 @@ export default function Detalle() {
   // 2. Efecto: Cada vez que cambie el ID, buscamos el nuevo producto
   useEffect(() => {
     // a) Llamamos a la API con el ID específico
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`https://mi-api-tienda.onrender.com/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProducto(data);
