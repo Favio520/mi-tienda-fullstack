@@ -49,7 +49,8 @@ def get_session():
 app = FastAPI()
 
 # CORS (Igual que antes, para que React entre)
-origins = ["http://localhost:5173"]
+origins = ["http://localhost:5173",    # Tu React local
+    "https://mi-api-tienda.onrender.com","*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
